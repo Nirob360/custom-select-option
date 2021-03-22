@@ -1,0 +1,14 @@
+const selected = document.querySelector('.slected');
+const optionContainer = document.querySelector('.options-container');
+const optionList = document.querySelectorAll('.option');
+
+selected.addEventListener('click', () => {
+
+    optionContainer.classList.toggle('active')
+})
+optionList.forEach(o => {
+    o.addEventListener('click', () => {
+        selected.innerHTML = o.querySelector('label').innerHTML;
+        optionContainer.classList.remove('active');
+    })
+})

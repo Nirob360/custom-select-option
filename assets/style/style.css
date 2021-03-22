@@ -1,0 +1,125 @@
+/* 
+
+
+fonts:***********
+font-family: 'Lora', serif;
+
+color code ************
+$body-color:#f7f6ff;
+
+
+
+
+
+
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background-color: #f7f6ff;
+}
+
+.custom-slect-area h2 {
+  margin: 16px;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.selct-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.selct-box .slected {
+  position: relative;
+  background-color: #2f3640;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  color: #fff;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  overflow: hidden;
+}
+
+.selct-box .slected::after {
+  content: '\f078';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 9px;
+  left: 92%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  color: #ffffff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.selct-box .options-container {
+  background-color: #2f3640;
+  color: #f5f6fa;
+  max-height: 0;
+  opacity: 0;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.selct-box .options-container .option {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.selct-box .options-container .option label {
+  cursor: pointer;
+}
+
+.selct-box .options-container .option:hover {
+  background-color: #414d57;
+}
+
+.selct-box .options-container .option .radio {
+  display: none;
+}
+
+.selct-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background-color: #0d141f;
+  border-radius: 0 8px 8px 0;
+}
+
+.selct-box .options-container::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.selct-box .active {
+  max-height: 240px;
+  overflow-y: scroll;
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
